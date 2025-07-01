@@ -7,7 +7,7 @@ module RedmineDefaultMembers
       def self.included(base)
         base.send(:include, InstanceMethods)
         base.class_eval do
-          unloadable
+          #unloadable
 
           alias_method :create_without_default_members, :create
           alias_method :create, :create_with_default_members
